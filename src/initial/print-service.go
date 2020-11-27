@@ -5,6 +5,6 @@ import "fmt"
 type printService struct{}
 
 func (p *printService) imprimir() {
-	fmt.Println("enviando el documento a imprimir")
-	fmt.Println("imprimiendo el documento en formato pdf")
+	fmt.Println("sending the document to printer")
+	fmt.Println("printing the document in pdf format")
 }
