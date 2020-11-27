@@ -1,10 +1,10 @@
-package main
+package service
 
 import "fmt"
 
-type printService struct{}
+type PrintService struct{}
 
-func (p *printService) imprimir() {
+func (p *PrintService) Print() {
 	fmt.Println("sending the document to printer")
 	fmt.Println("printing the document in pdf format")
 }

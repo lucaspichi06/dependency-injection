@@ -1,4 +1,4 @@
-package main
+package service
 
 import "fmt"
 
@@ -14,7 +14,7 @@ func NewPrintService() *printService {
 	}
 }
 
-func (p *printService) imprimir() {
+func (p *printService) Print() {
 	p.send.send()
 	p.pdf.pdf()
 }

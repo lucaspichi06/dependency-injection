@@ -1,6 +1,8 @@
 package main
 
+import "github.com/lucaspichi06/dependency-injection/src/initial/service"
+
 func main() {
-	var printService *printService
-	printService.imprimir()
+	printService := &service.PrintService{}
+	printService.Print()
 }
