@@ -2,6 +2,10 @@ package service
 
 import "fmt"
 
+type formatService interface {
+	print()
+}
+
 type printService struct {
 	send   *sendService
 	format formatService
@@ -14,7 +18,7 @@ func NewPrintService(send *sendService, format formatService) *printService {
 	}
 }
 
-func (p *printService) Print() {
+func (p *printService) HandlePrint() {
 	p.send.send()
 	p.format.print()
 }
@@ -27,10 +31,6 @@ func NewSendService() *sendService {
 
 func (s *sendService) send() {
 	fmt.Println("sending the document to printer")
-}
-
-type formatService interface {
-	print()
 }
 
 type pdfService struct{}
